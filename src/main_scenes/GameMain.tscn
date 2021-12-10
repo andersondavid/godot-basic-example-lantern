@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/map/Map.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/main_scenes/Hud.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/main_scenes/GameMain.gd" type="Script" id=4]
+
+[node name="GameMain" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="Map" parent="." instance=ExtResource( 2 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26, 0 )
+
+[node name="Hud" parent="." instance=ExtResource( 3 )]
